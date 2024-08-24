@@ -1,9 +1,9 @@
-import {Image, SafeAreaView, StatusBar, Text, View} from 'react-native';
+import {Image, SafeAreaView, StatusBar, View} from 'react-native';
 
-const App = () => {
+const SplashScreen = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <StatusBar backgroundColor="#8B78FF" />
+      <StatusBar backgroundColor="#8F6FFF" />
       <View
         style={{
           flex: 1,
@@ -11,10 +11,10 @@ const App = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Text style={{fontSize: 30}}>Home Page</Text>
+        <Image source={require('./src/assets/Logo.png')} />
       </View>
     </SafeAreaView>
   );
 };
 
-export default App;
+export default SplashScreen;
