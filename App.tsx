@@ -1,19 +1,31 @@
-import {Image, SafeAreaView, StatusBar, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from './src/screens/splash';
+import OnBoard1 from './src/screens/onboard1';
+import GetStarted from './src/screens/getstarted';
 
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <StatusBar backgroundColor="#8B78FF" />
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#F8F6FF',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-        <Text style={{fontSize: 30}}>Home Page</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="splash"
+          options={{headerShown: false}}
+          component={SplashScreen}
+        />
+        <Stack.Screen
+          name="onboard1"
+          options={{headerShown: false}}
+          component={OnBoard1}
+        />
+        <Stack.Screen
+          name="getstarted"
+          component={GetStarted}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
