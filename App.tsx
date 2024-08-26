@@ -4,6 +4,8 @@ import SplashScreen from './src/screens/splash';
 import OnBoard1 from './src/screens/onboard1';
 import GetStarted from './src/screens/getstarted';
 import OnBoard2 from './src/screens/onboard2';
+import onboard3 from './src/screens/onboard3';
+import OnBoard3 from './src/screens/onboard3';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -29,6 +31,11 @@ const App = () => {
           name="onboard2"
           options={{headerShown: false}}
           component={OnBoard2}
+        />
+        <Stack.Screen
+          name="onboard3"
+          options={{headerShown: false}}
+          component={OnBoard3}
         />
       </Stack.Navigator>
     </NavigationContainer>
