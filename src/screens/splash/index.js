@@ -9,7 +9,7 @@ const SplashScreen = ({navigation}) => {
   }, []);
   return (
     <SafeAreaView style={{flex: 1}}>
-      <StatusBar backgroundColor="#8F6FFF" />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View
         style={{
           flex: 1,

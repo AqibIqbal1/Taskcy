@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from './src/screens/splash';
 import OnBoard1 from './src/screens/onboard1';
 import GetStarted from './src/screens/getstarted';
+import OnBoard2 from './src/screens/onboard2';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -15,14 +16,19 @@ const App = () => {
           component={SplashScreen}
         />
         <Stack.Screen
+          name="getstarted"
+          component={GetStarted}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name="onboard1"
           options={{headerShown: false}}
           component={OnBoard1}
         />
         <Stack.Screen
-          name="getstarted"
-          component={GetStarted}
+          name="onboard2"
           options={{headerShown: false}}
+          component={OnBoard2}
         />
       </Stack.Navigator>
     </NavigationContainer>
