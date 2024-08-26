@@ -72,7 +72,7 @@ const OnBoard3 = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('onboard3');
+              navigation.navigate('signin');
             }}>
             <Image source={require('./../assets/nextbutton.png')} />
           </TouchableOpacity>
