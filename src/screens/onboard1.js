@@ -33,27 +33,42 @@ const OnBoard1 = ({navigation}) => {
             paddingHorizontal: 20,
             gap: 10,
           }}>
-          <View
-            style={{
-              width: 30,
-              height: 10,
-              borderRadius: 20,
-              backgroundColor: '#5451D6',
-            }}></View>
-          <View
-            style={{
-              width: 10,
-              height: 10,
-              borderRadius: 20,
-              backgroundColor: '#8D8D8D',
-            }}></View>
-          <View
-            style={{
-              width: 10,
-              height: 10,
-              borderRadius: 20,
-              backgroundColor: '#8D8D8D',
-            }}></View>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('onboard1');
+            }}>
+            <View
+              style={{
+                width: 30,
+                height: 10,
+                borderRadius: 20,
+                backgroundColor: '#5451D6',
+              }}></View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('onboard2');
+            }}>
+            <View
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: 20,
+                backgroundColor: '#8D8D8D',
+              }}></View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('onboard3');
+            }}>
+            <View
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: 20,
+                backgroundColor: '#8D8D8D',
+              }}></View>
+          </TouchableOpacity>
         </View>
         <View
           style={{

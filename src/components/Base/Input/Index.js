@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import {StyleSheet, TextInput} from 'react-native';
 
-const Input = () => {
+const Input = props => {
+  const {placeholder, SetFormData} = props;
   const [onfocus, SetOnFocus] = useState();
   return (
     <TextInput
+      placeholder={placeholder}
       style={onfocus ? style.InputFocus : style.Input}
       onFocus={() => {
         SetOnFocus(true);
@@ -23,7 +25,6 @@ export default Input;
 
 const style = StyleSheet.create({
   Input: {
-    margin: 20,
     paddingHorizontal: 10,
     paddingVertical: 10,
     borderRadius: 10,
@@ -32,7 +33,6 @@ const style = StyleSheet.create({
     fontSize: 14,
   },
   InputFocus: {
-    margin: 20,
     paddingHorizontal: 10,
     paddingVertical: 10,
     borderRadius: 10,
