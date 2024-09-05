@@ -7,6 +7,7 @@ import OnBoard2 from './src/screens/onboard2';
 import OnBoard3 from './src/screens/onboard3';
 import Signin from './src/screens/signin';
 import Signup from './src/screens/signup';
+import Dashboard from './src/screens/dashboard';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -47,6 +48,11 @@ const App = () => {
           name="signup"
           options={{headerShown: false}}
           component={Signup}
+        />
+        <Stack.Screen
+          name="dashboard"
+          options={{headerShown: false}}
+          component={Dashboard}
         />
       </Stack.Navigator>
     </NavigationContainer>

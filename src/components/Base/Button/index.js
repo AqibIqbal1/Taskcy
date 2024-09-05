@@ -1,7 +1,7 @@
 import {Text, TouchableOpacity} from 'react-native';
 
 export default Button = props => {
-  const {value} = props;
+  const {value, prop, onPress} = props;
   return (
     <TouchableOpacity
       style={{
@@ -15,7 +15,10 @@ export default Button = props => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <Text style={{fontSize: 24, fontWeight: '600', color: 'white'}}>
+      <Text
+        style={{fontSize: 24, fontWeight: '600', color: 'white'}}
+        onPress={onPress}
+        {...prop}>
         {value}
       </Text>
     </TouchableOpacity>

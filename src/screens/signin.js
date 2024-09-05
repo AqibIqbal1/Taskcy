@@ -16,7 +16,12 @@ const Signin = ({navigation}) => {
     password: '',
   });
   return (
-    <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+        paddingHorizontal: 20,
+        paddingTop: 20,
+      }}>
       <View style={{flex: 1}}>
         <Text style={{textAlign: 'center'}}>Signin</Text>
       </View>
@@ -76,7 +81,7 @@ const Signin = ({navigation}) => {
         </View>
         <Text>
           Not Register Yet?{' '}
-          <Text style={{color: '#756EF3', fontWeight: '700'}}>Sign Up</Text>
+          <Text onPress={()=>{navigation.navigate("signup")}} style={{color: '#756EF3', fontWeight: '700'}}>Sign Up</Text>
         </Text>
       </View>
     </ScrollView>
