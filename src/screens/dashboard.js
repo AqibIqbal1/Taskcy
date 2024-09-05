@@ -56,6 +56,7 @@ const Dashboard = ({navigation}) => {
         flexGrow: 1,
         paddingHorizontal: 20,
         paddingTop: 20,
+        backgroundColor: '#fff',
       }}>
       <View style={{flex: 0.2}}>
         <Text style={{textAlign: 'center'}}>Signup</Text>
@@ -113,9 +114,28 @@ const Dashboard = ({navigation}) => {
             {cardData.map((val, index) => {
               return (
                 <View style={styles.progressCard}>
-                  <Text style={{color:"#000",}}>{val.taskName}</Text>
-                  <Text style={{color:"#000",fontWeight: '700'}}>{val.category}</Text>
-                  <Text style={{color:"#000",}}>2 Min Ago</Text>
+                  <View>
+                    <Text style={{color: '#848A94'}}>{val.taskName}</Text>
+                    <Text style={{color: '#002056', fontWeight: '700'}}>
+                      {val.category}
+                    </Text>
+                    <Text style={{color: '#848A94'}}>2 Min ago</Text>
+                  </View>
+                  <View
+                    style={{
+                      borderColor: '#756EF3',
+                      borderRadius: 50,
+                      borderWidth: 5,
+                      width: 50,
+                      height: 50,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                    <Text
+                      style={{color: '#000', fontWeight: '700', fontSize: 16}}>
+                      60%
+                    </Text>
+                  </View>
                 </View>
               );
             })}
@@ -138,7 +158,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   cardTwo: {
-    borderColor: '#fefefe',
+    borderColor: '#E9F1FF',
     borderWidth: 2,
     height: 150,
     borderRadius: 20,
@@ -153,7 +173,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   progressCard: {
-    borderColor: '#fefefe',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderColor: '#E9F1FF',
     borderWidth: 2,
     padding: 10,
     margin: 10,
