@@ -1,11 +1,11 @@
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 
-const OnBoard1 = ({navigation}) => {
+const OnBoard2 = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={{flex: 3}}>
         <Image
-          source={require('./../assets/onboard1.png')}
+          source={require('./../assets/onboard2.png')}
           style={{objectFit: 'contain'}}
         />
       </View>
@@ -21,8 +21,8 @@ const OnBoard1 = ({navigation}) => {
         <View style={{flex: 3.5, display: 'flex', paddingHorizontal: 20}}>
           <Text style={{color: '#756EF3', fontSize: 20}}>Task Management</Text>
           <Text style={{color: '#002055', fontSize: 38, fontWeight: '500'}}>
-            Let's Create a <Text style={{color: '#756EF3'}}>Space</Text> for
-            your workflows.
+            Work More <Text style={{color: '#756EF3'}}>Structured</Text> and
+            Organaized 👌
           </Text>
         </View>
         <View
@@ -39,10 +39,10 @@ const OnBoard1 = ({navigation}) => {
             }}>
             <View
               style={{
-                width: 30,
+                width: 10,
                 height: 10,
                 borderRadius: 20,
-                backgroundColor: '#5451D6',
+                backgroundColor: '#8D8D8D',
               }}></View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -51,10 +51,10 @@ const OnBoard1 = ({navigation}) => {
             }}>
             <View
               style={{
-                width: 10,
+                width: 30,
                 height: 10,
                 borderRadius: 20,
-                backgroundColor: '#8D8D8D',
+                backgroundColor: '#5451D6',
               }}></View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -87,7 +87,7 @@ const OnBoard1 = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('onboard2');
+              navigation.navigate('onboard3');
             }}>
             <Image source={require('./../assets/nextbutton.png')} />
           </TouchableOpacity>
@@ -97,4 +97,4 @@ const OnBoard1 = ({navigation}) => {
   );
 };
 
-export default OnBoard1;
+export default OnBoard2;

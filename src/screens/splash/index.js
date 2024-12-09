@@ -1,9 +1,15 @@
+import {useEffect} from 'react';
 import {Image, SafeAreaView, StatusBar, View} from 'react-native';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('getstarted');
+    }, 5000);
+  }, []);
   return (
     <SafeAreaView style={{flex: 1}}>
-      <StatusBar backgroundColor="#8F6FFF" />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View
         style={{
           flex: 1,
@@ -11,7 +17,7 @@ const SplashScreen = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Image source={require('./src/assets/Logo.png')} />
+        <Image source={require('../../assets/Logo.png')} />
       </View>
     </SafeAreaView>
   );

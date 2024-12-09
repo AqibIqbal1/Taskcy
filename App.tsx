@@ -1,19 +1,61 @@
-import {Image, SafeAreaView, StatusBar, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from './src/screens/splash';
+import GetStarted from './src/screens/getstarted';
+import OnBoard1 from './src/screens/onboard1';
+import OnBoard2 from './src/screens/onboard2';
+import OnBoard3 from './src/screens/onboard3';
+import Signin from './src/screens/signin';
+import Signup from './src/screens/signup';
+import Dashboard from './src/screens/dashboard';
 
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <StatusBar backgroundColor="#8B78FF" />
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#F8F6FF',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-        <Text style={{fontSize: 30}}>Home Page</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="splash"
+          options={{headerShown: false}}
+          component={SplashScreen}
+        />
+        <Stack.Screen
+          name="getstarted"
+          component={GetStarted}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="onboard1"
+          options={{headerShown: false}}
+          component={OnBoard1}
+        />
+        <Stack.Screen
+          name="onboard2"
+          options={{headerShown: false}}
+          component={OnBoard2}
+        />
+        <Stack.Screen
+          name="onboard3"
+          options={{headerShown: false}}
+          component={OnBoard3}
+        />
+        <Stack.Screen
+          name="signin"
+          options={{headerShown: false}}
+          component={Signin}
+        />
+        <Stack.Screen
+          name="signup"
+          options={{headerShown: false}}
+          component={Signup}
+        />
+        <Stack.Screen
+          name="dashboard"
+          options={{headerShown: false}}
+          component={Dashboard}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
